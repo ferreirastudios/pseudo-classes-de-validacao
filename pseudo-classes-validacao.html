@@ -1,0 +1,104 @@
+<html lang="pt-br"> 
+<head>
+	<meta charset="UTF-8">
+    <title>PSEUDO-CLASSES</title>  
+    <style>
+
+    /* Muda o estado de um campo obrigatório */
+    input:required {
+    	background-color: yellow;
+    }
+
+    /* Muda o estado de um campo que é válido ou inválido */
+    input[type=email]:valid {
+    	border: 2px solid green;
+    }
+
+    input[type=email]:invalid {
+    	border: 2px solid red;
+    }
+
+    input:checked {
+    	height: 50px;
+    	width: 50px;
+    }
+
+	/* Input com o estado habilitado */
+    input[type=tel]:enabled {
+		background: green;
+    }
+
+    input[type=tel]:disabled {
+		background: silver;
+    }
+
+    /* Todo o documento estrutural do HTML
+    */
+
+    *:root {
+    	background-color: silver;
+    	padding: 3em;
+    } 
+
+    body {
+    	background-color: white;
+    	padding: 1.5em;
+    }
+
+    /* Usando target para trabalhar
+       com estados de âncora */
+
+       .tabs section {
+         display: none;
+       }
+
+       .tabs section:target {
+         display: block;
+       }
+
+	</style> 
+</head>
+<body>
+
+	<input type="text" required> Campo Requerido.
+
+	<input type="email" value="leonardoferreira"> Inválido
+
+	<input type="radio" checked="checked"> Estado checked. <br>
+
+	<input type="tel" value="habilitado">Habilitado <br>
+
+	<input type="tel" value="desabilitado" disabled>Desabilitado <br>
+	<br>
+
+	<aside class="tabs">
+
+		<a href="#link1">Section 1</a>
+		<a href="#link2">Section 2</a>
+		<a href="#link3">Section 3</a>
+
+		<section id="link1">
+			<h3>Título de 1</h3>
+			<p>Conteúdo de 1</p>
+		</section>
+
+		<section id="link2">
+			<h3>Título de 2</h3>
+			<p>Conteúdo de 2</p>
+		</section>
+
+		<section id="link3">
+			<h3>Título de 3</h3>
+			<p>Conteúdo de 3</p>
+		</section>
+
+	</aside>
+
+
+</body>
+</html>
+
+
+
+
+
